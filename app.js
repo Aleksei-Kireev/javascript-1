@@ -6,11 +6,18 @@
 - Сколько вы за неё попросите?
 */
 
-const priceToHour = 80;
-const hoursToDay = 5;
-const daysToWeek = 5;
-const work = 40;
-const daysToWeekend = 11;
+// Данные
+const payRateUSD = 80;
+const projectHours = 40;
+const availableHours = (11 - 2) * 5;
 
-console.log((daysToWeekend - 2) * 5 >= work);
-console.log(work * priceToHour);
+// Результат
+console.log('Смогу ли я работать? ' + (availableHours > projectHours));
+console.log('Стоимость работ: ' + projectHours * payRateUSD);
+
+const name = 'Aleksei';
+const city = 'Nizhny Novgorod';
+
+const template1 = `Name ${name}
+My city ${city}`;
+console.log(template1);
