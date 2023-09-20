@@ -1,23 +1,10 @@
-/*
-Ваша часовая ставка 80$ и вы готовы работать не более 5 часов в день 5 дней в неделю (кроме выходных).
-К вам приходит заказчик и предлагает заказ на 40 часов работы. Сейчас понедельник. Вы должны уехать через 11 дней.
-Выведете в консоль:
-- Boolean переменную успеете ли вы взяться за работу
-- Сколько вы за неё попросите?
-*/
+const money = 100;
+const canBuy = money > 50;
 
-// Данные
-const payRateUSD = 80;
-const projectHours = 40;
-const availableHours = (11 - 2) * 5;
+if (canBuy) {
+    console.log('Может купить');
+} else {
+    console.log('Не хватает средств');
+}
 
-// Результат
-console.log('Смогу ли я работать? ' + (availableHours > projectHours));
-console.log('Стоимость работ: ' + projectHours * payRateUSD);
-
-const name = 'Aleksei';
-const city = 'Nizhny Novgorod';
-
-const template1 = `Name ${name}
-My city ${city}`;
-console.log(template1);
+console.log('Конец программы');
