@@ -1,14 +1,6 @@
-const moneyStart = 12000;
-const percent = 7;
-const months = 24;
-const price = 13500;
-
-const moneyEnd = moneyStart * (1 + percent / 100 / 12) ** months;
-
-if (moneyEnd > price) {
-    console.log('Дом куплен. Остаток: ' + (moneyEnd - price));
-} else if (moneyEnd == price) {
-    console.log('Дом куплен. Средств не осталось');
+let str = prompt('Сколько будет 7 + или - 15?');
+if (Number(str) === 22 || Number(str) === -8 || str === 'Я не робот') {
+    console.log('Успех');
 } else {
-    console.log('Не хватает средств: ' + (price - moneyEnd));
+    console.log('Вы робот!');
 }
