@@ -1,6 +1,13 @@
-let str = prompt('Сколько будет 7 + или - 15?');
-if (Number(str) === 22 || Number(str) === -8 || str === 'Я не робот') {
-    console.log('Успех');
-} else {
-    console.log('Вы робот!');
+const balance = 1200;
+const bonusBalance = 100;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+if (((balance >= 1000) || (bonusBalance >= 100)) && !isBanned && !isExist && isSelling)
+{
+    console.log('Игра куплена');
+}
+else {
+    console.log('Игру нельзя купить');
 }
