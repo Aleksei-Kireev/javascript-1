@@ -1,13 +1,10 @@
-const balance = 1200;
-const bonusBalance = 100;
-const isBanned = false;
-const isExist = false;
-const isSelling = true;
+// Обычная функция
+function toPower(num, power) {
+    const res = num ** power;
+    return res;
+}
+console.log(toPower(2, 3));
 
-if (((balance >= 1000) || (bonusBalance >= 100)) && !isBanned && !isExist && isSelling)
-{
-    console.log('Игра куплена');
-}
-else {
-    console.log('Игру нельзя купить');
-}
+// Стрелочная функция
+const toPowerArrow = (num, power) => num ** power;
+console.log(toPowerArrow(2, 3));
