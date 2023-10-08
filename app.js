@@ -1,28 +1,29 @@
-const userAge = 25;
-const userIsWork = true;
-const userMoney = 1500;
+const tasks = ['Задача 1'];
 
-const priceMacBook = 2000;
+function addTask(task) {
+    return tasks.push(task);
+}
+addTask('Задача 2');
+addTask('Задача 3');
+addTask('Задача 4');
+addTask('Задача 5');
+console.log(tasks);
 
-function canBuy() {
-    if (userMoney >= priceMacBook) {
-        return 'Идем покупать ноутбук!';
-    } else if (bankMoney() + userMoney >= priceMacBook) {
-        return 'Идем покупать ноутбук!';
-    } else {
-        return 'Не хватает средств!';
+function deleteTask(task) {
+    if (tasks.includes(task)) {
+        return tasks.splice(tasks.indexOf(task), 1);
+    }
+    return tasks;
+}
+deleteTask('Задача 4');
+console.log(tasks);
+
+function transferTask(task) {
+    if (tasks.includes(task)) {
+        const id = tasks.indexOf(task);
+        tasks.unshift(tasks[id]);
+        tasks.splice(id + 1, 1);
     }
 }
-
-function bankMoney() {
-    switch(true) {
-        case userAge > 24 && userIsWork === true:
-            return 500;
-        case userAge > 24:
-            return 100;
-        default:
-            return 0;
-    }
-}
-
-console.log(canBuy());
+transferTask('Задача 3');
+console.log(tasks);
