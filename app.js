@@ -1,29 +1,10 @@
-const tasks = ['Задача 1'];
+const url = 'https://purpleschool.ru/course/javascript';
 
-function addTask(task) {
-    return tasks.push(task);
+function getUrlParts(url) {
+    const [protocol, _, host, ...path] = url.split('/');
+    console.log(`Протокол: ${protocol.split(':')[0]}`);
+    console.log(`Доменное имя: ${host}`);
+    console.log(`Путь внутри сайта: /${path.join('/')}`);
 }
-addTask('Задача 2');
-addTask('Задача 3');
-addTask('Задача 4');
-addTask('Задача 5');
-console.log(tasks);
 
-function deleteTask(task) {
-    if (tasks.includes(task)) {
-        return tasks.splice(tasks.indexOf(task), 1);
-    }
-    return tasks;
-}
-deleteTask('Задача 4');
-console.log(tasks);
-
-function transferTask(task) {
-    if (tasks.includes(task)) {
-        const id = tasks.indexOf(task);
-        tasks.unshift(tasks[id]);
-        tasks.splice(id + 1, 1);
-    }
-}
-transferTask('Задача 3');
-console.log(tasks);
+getUrlParts(url);
