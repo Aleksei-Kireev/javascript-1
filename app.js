@@ -1,35 +1,17 @@
-const operations = [1000, -700, 300, -500, 10000];
-let balance = 100;
-let len = operations.length;
-let positiveSum = 0, negativeSum = 0;
-let positiveIndex = 0, negativeIndex = 0;
+// function power(pow) {
+//     return function (num) {
+// //         return num ** pow;
+// //     }
+// // }
 
-function getBalance(balance, operations) {
-    for (let i = 0; i < len; i++) {
-        if (balanceCheck(balance, operations[i])) {
-            balance += operations[i];
-            f3(operations[i]);
-        } else break;
-    }
-    return balance;
-}
+let power = pow => num => num ** pow;
 
-function balanceCheck(balance, num) {
-    if (balance + num >= 0) {
-        return true;
-    } else return false;
-}
 
-function f3(num) {
-    if (num >= 0) {
-        positiveSum += num;
-        positiveIndex++;
-    } else {
-        negativeSum += num;
-        negativeIndex++;
-    }
-}
+const powerOfTwo = power(2);
+console.log(powerOfTwo(5));
+console.log(powerOfTwo(10));
 
-console.log(`Итоговый баланс: ${getBalance(balance, operations)}`);
-console.log(`Средний расход: ${negativeSum/negativeIndex}`);
-console.log(`Средний доход: ${positiveSum/positiveIndex}`);
+const powerOfThree = power(3);
+console.log(powerOfThree(5));
+
+console.log(power(5)(4));
