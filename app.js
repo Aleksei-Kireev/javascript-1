@@ -1,17 +1,11 @@
-// function power(pow) {
-//     return function (num) {
-// //         return num ** pow;
-// //     }
-// // }
+const prices = [[100, 200], [120, 100], [200, 350]];
 
-let power = pow => num => num ** pow;
+const positiveSales = prices
+    .map(prices => {
+        return prices[1] - prices[0];
+    })
+    .filter(val => {
+        return val > 0;
+    });
 
-
-const powerOfTwo = power(2);
-console.log(powerOfTwo(5));
-console.log(powerOfTwo(10));
-
-const powerOfThree = power(3);
-console.log(powerOfThree(5));
-
-console.log(power(5)(4));
+console.log(positiveSales);
